@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(0, 98, 255);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title{
+    display: block;
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+main{
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-right: 1em;
+}
+
+.item input{
+    margin: .5em 1.2em;
+    padding-left: 4px;
+    width: 20vw;
+    font-size: 1.3em;
+}
+
+thead tr th{
+    padding: 0px 1vw;
+    font-size: 1.3em;
+}
+
+tfoot th{
+    font-size: 1.3em;
+}
+
+.item-total-cell{
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#add-item{
+    margin: 1em 0;
+    padding: .5em;
+    background-color: yellow;
+    border-radius: 25px;
+}
+
+#add-item:hover{
+    box-shadow: black 2px 2px 0px 0px;
+    background-color: rgb(255, 255, 118);
+    font-weight: bolder;
+}
+
+#print-bill{
+    padding: .5em;
+    background-color: rgb(0, 132, 255);
+    color: whitesmoke;
+    border-radius: 25px;
+}
+
+#print-bill:hover{
+    box-shadow: black 2px 2px 0px 0px;
+    background-color: rgb(0, 102, 198);
+    font-weight: bolder;
+}
+
+.del-cell{
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 1em;
+    cursor: pointer;
+    padding: .1em .5em;
+    font-size: 1em;
+}
+
+.delete-btn:hover {
+    background-color: #d60707;
+}
+
+#gtotal{
+    font-size: 1.3em;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    td::before {
+        content: attr(data-value);
+        font-size: 14px;
+        padding-left: 10px;
+        display: inline-block;
+    }
+}
